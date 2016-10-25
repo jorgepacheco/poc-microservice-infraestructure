@@ -1,0 +1,25 @@
+server:
+  port: 8888
+  
+logging:
+  file: logs/${spring.application.name}.log
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
+    com.atsistemas: 'DEBUG'
+    
+    
+spring:
+#  profiles:
+#    active: native
+
+  application:
+    name: configserver  # Service registers under this name
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/jorgepacheco/config-repo
+        
+#         uri: file:///${HOME}/cygnus-config
+          

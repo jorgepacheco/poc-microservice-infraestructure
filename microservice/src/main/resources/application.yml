@@ -1,0 +1,18 @@
+#Configuration for failfast=false
+
+# HTTP Server
+server:
+  port: 3334   # HTTP port
+
+logging:
+  file: logs/kk.log
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
+    com.autentia: 'DEBUG'
+
+# Discovery Server Access
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
